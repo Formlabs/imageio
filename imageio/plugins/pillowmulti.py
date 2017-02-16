@@ -251,7 +251,8 @@ class GifWriter:
         """ Application extention. This part specifies the amount of loops.
         If loop is 0 or inf, it goes on infinitely.
         """
-
+        if loop == 1:
+            return b""
         if loop == 0:
             loop = 2 ** 16 - 1
         bb = b""
